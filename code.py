@@ -1,3 +1,3 @@
+x = 10
 
-fgsdg
-fghdfhdfh
+print("Hello World....testing jenkins with sonarqube")
