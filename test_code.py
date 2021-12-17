@@ -13,8 +13,8 @@ class Testing(unittest.TestCase):
         b = True
         self.assertEqual(sum(10), 20)
         
-    def test_diff_1(self):
-        self.assertEqual(diff(5), 6)
+    #def test_diff_1(self):
+    #    self.assertEqual(diff(5), 6)
         
         
     #def test_diff_2(self):
