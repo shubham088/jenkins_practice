@@ -20,9 +20,9 @@ class Testing(unittest.TestCase):
 #         self.assertEqual(f.diff(5), 5)
         
      
-#     def test_diff_2(self):
-#         f = Func()
-#         self.assertEqual(f.diff(6,5), 1)
+    def test_diff_2(self):
+        f = Func()
+        self.assertEqual(f.diff(6,5), 1)
 
 
 if __name__ == '__main__':
