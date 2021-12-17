@@ -17,8 +17,8 @@ class Testing(unittest.TestCase):
         self.assertEqual(diff(5), 6)
         
         
-    def test_diff_2(self):
-        self.assertEqual(diff(6,5), 1)
+    #def test_diff_2(self):
+    #    self.assertEqual(diff(6,5), 1)
 
 if __name__ == '__main__':
     unittest.main()
