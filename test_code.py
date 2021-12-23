@@ -24,6 +24,7 @@ class Testing(unittest.TestCase):
         f = Func()
         self.assertEqual(f.diff(6,5), 1)
 
+        
 
 if __name__ == '__main__':
     unittest.main()
