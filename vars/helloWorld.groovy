@@ -1,3 +1,3 @@
-def printHello() {
- echo "Hello World"
+def printHello(String name) {
+ echo "Hello ${name}"
 }
