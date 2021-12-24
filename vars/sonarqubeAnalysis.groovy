@@ -1,6 +1,6 @@
-def sonarAnalysis(String sonarServerName, String sonarScanner) {
+def sonarAnalysis(String sonarServerName) {
   withSonarQubeEnv(${sonarServerName}) {
-     sh "${sonarScanner}/bin/sonar-scanner"
+     sh this.env.scanner+"/bin/sonar-scanner"
   }
 
 }
