@@ -1,6 +1,6 @@
-def sonarAnalysis(String sonarServerName, String sonarScanner, String[] data) {
-  echo data[0]
-  echo "$data[0]"
+def sonarAnalysis(String sonarServerName, String sonarScanner) {
+//   echo data[0]
+//   echo "$data[0]"
   withSonarQubeEnv(sonarServerName) {
     sh sonarScanner+"/bin/sonar-scanner"
   }
