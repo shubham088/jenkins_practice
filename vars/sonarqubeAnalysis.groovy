@@ -50,7 +50,7 @@ def artifactoryUpload(String[] data){
   String[] pattern = pat.split(" ")
   String[] target  = tar.split(" ")
   println("target for pattern 0")
-  echo "${artifactoryFolderName}+${target[0]}+${build.toString()}"
+  echo "${artifactoryFolderName}${target[0]}${build.toString()}"
   rtUpload (
   serverId: serverID,
   spec: '''{
