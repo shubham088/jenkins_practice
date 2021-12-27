@@ -25,7 +25,7 @@ def artifactoryUpload(String[] data){
   String target_path1= artifactoryFolderName+target[0]+build.toString()
   def spec_data = readJSON file: 'artifactory.json'
   spec_data['files'][0].put('pattern', pattern[0])
-  soec_data['files'][0].put('pattern', pattern[1])
+  spec_data['files'][0].put('pattern', pattern[1])
   spec_data['files'][0].put('target', artifactoryFolderName+target[0]+build.toString()+"/")
   spec_data['files'][1].put('target', artifactoryFolderName+target[1]+build.toString()+"/")
   println(spec_data)
