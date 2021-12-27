@@ -14,7 +14,39 @@ def qualityGateAnalysis(int timer, String credential_id){
    waitForQualityGate abortPipeline: true, credentialsId: credential_id
 }
 
-def artifactoryUpload(int build, String serverID, String artifactoryFolderName, String pat, String tar){
+// def artifactoryUpload(int build, String serverID, String artifactoryFolderName, String pat, String tar){
+//   String[] pattern = pat.split(" ")
+//   String[] target  = tar.split(" ")
+//   println(target[0])
+//   println(target[1])
+// //   rtUpload (
+// //   serverId: serverID,
+// //   spec: '''{
+// //         "files": [
+// //           {
+// //             "pattern": pattern[0],
+// //             "target":  artifactoryFolderName+target[0]+build.toString()
+// //           },
+// //           {
+// //             "pattern": pattern[1],
+// //             "target" : artifactoryFolderName+target[1]+build.toString(),
+// //             "recursive":true
+// //           }
+// //        ]
+// //       }''',
+
+// //   )
+  
+//  echo "done uploading artifacts using shared lib"
+
+// }
+
+def artifactoryUpload(String[] data){
+  String build = data[0]
+  String serverID = data[1]
+  String artifactoryFolderName = data[2]
+  String pat = data[3]
+  String tar = data[4]
   String[] pattern = pat.split(" ")
   String[] target  = tar.split(" ")
   println(target[0])
