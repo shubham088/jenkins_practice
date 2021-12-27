@@ -34,22 +34,8 @@ def artifactoryUpload(String[] data){
   println(spec_data)
   println(spec_data.getClass())
   rtUpload (
-  serverId: serverID,
-//   spec: '''{
-//         "files": [
-//           {
-//             "pattern": ${pattern[0]},
-//             "target":  ${artifactoryFolderName}+${target[0]}+${build.toString()}
-//           },
-//           {
-//             "pattern": ${pattern[1]},
-//             "target" : ${artifactoryFolderName}+${target[1]}+${build.toString()},
-//             "recursive":true
-//           }
-//        ]
-//       }''',
+    serverId: serverID,
     spec : groovy.json.JsonOutput.toJson(spec_data),
-
   )
   
  echo "done uploading artifacts using shared lib"
