@@ -53,6 +53,7 @@ def artifactoryUpload(String[] data){
   String path = "${artifactoryFolderName}${target[0]}${build.toString()}"
   String target_path1= artifactoryFolderName+target[0]+build.toString()
   def spec_data = readJSON file: 'artifactory.json'
+  println(spec_data)
   rtUpload (
   serverId: serverID,
 //   spec: '''{
