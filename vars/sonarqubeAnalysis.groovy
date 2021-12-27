@@ -5,9 +5,9 @@ def sonarAnalysis(String sonarServerName, String sonarScanner) {
 }
 
 
-def qualityGateAnalysis(int timer, String credential_id, String data, String[] my_data){
+def qualityGateAnalysis(int timer, String credential_id, String data){
   echo "$data"
-  echo "$my_data"
+  
    sleep timer
    waitForQualityGate abortPipeline: true, credentialsId: credential_id
 }
