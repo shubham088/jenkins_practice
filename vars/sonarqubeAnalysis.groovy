@@ -18,7 +18,7 @@ def artifactoryUpload(int build, String serverID, String artifactoryFolderName, 
   String[] pattern = pat.split(" ")
   String[] target  = tar.split(" ")
   println("target 0: ", target[0])
-  println("target 1":, target[1])
+  println("target 1: ", target[1])
   rtUpload (
   serverId: serverID,
   spec: '''{
