@@ -44,7 +44,7 @@ def artifactoryUpload(String[] data){
 //           }
 //        ]
 //       }''',
-    spec : ""+spec_data,
+    spec : JsonOutput.toJson(spec_data),
 
   )
   
