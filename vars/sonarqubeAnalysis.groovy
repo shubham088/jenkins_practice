@@ -1,3 +1,6 @@
+import groovy.json.*
+
+
 def sonarAnalysis(String sonarServerName, String sonarScanner) {
   withSonarQubeEnv(sonarServerName) {
     sh sonarScanner+"/bin/sonar-scanner"
@@ -45,7 +48,7 @@ def artifactoryUpload(String[] data){
 //           }
 //        ]
 //       }''',
-    spec : spec_data,
+    spec : groovy.json.JsonOutput.toJson(spec_data),
 
   )
   
