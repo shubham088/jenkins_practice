@@ -56,12 +56,12 @@ def artifactoryUpload(String[] data){
   spec: '''{
         "files": [
           {
-            "pattern": pattern[0],
-            "target":  artifactoryFolderName+target[0]+build.toString()
+            "pattern": "${pattern[0]}",
+            "target":  "${artifactoryFolderName}"+"${target[0]}"+"${build.toString()}"
           },
           {
-            "pattern": pattern[1],
-            "target" : artifactoryFolderName+target[1]+build.toString(),
+            "pattern": "${pattern[1]}",
+            "target" : "${artifactoryFolderName}"+"${target[1]}"+"${build.toString()}",
             "recursive":true
           }
        ]
