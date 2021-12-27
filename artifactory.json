@@ -1,12 +1,12 @@
 {
   "files": [
     {
-      "pattern": "coverage.xml",
-      "target": "sample/coverage${BUILD_NUMBER}/"
+      "pattern": "",
+      "target": ""
     },
     {
-      "pattern": "htmlcov/*",
-      "target" : "sample/htmlcov${BUILD_NUMBER}/",
+      "pattern": "",
+      "target" : "",
       "recursive":true
     }
  ]
