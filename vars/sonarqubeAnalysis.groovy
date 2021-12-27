@@ -29,6 +29,7 @@ def artifactoryUpload(String[] data){
   spec_data['files'][0].put('target', artifactoryFolderName+target[0]+build.toString()+"/")
   spec_data['files'][1].put('target', artifactoryFolderName+target[1]+build.toString()+"/")
   println(spec_data)
+  println(spec_data.getClass())
   rtUpload (
   serverId: serverID,
 //   spec: '''{
@@ -44,7 +45,7 @@ def artifactoryUpload(String[] data){
 //           }
 //        ]
 //       }''',
-    spec : JsonOutput.toJson(spec_data),
+    spec : spec_data,
 
   )
   
