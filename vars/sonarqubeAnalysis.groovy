@@ -52,21 +52,23 @@ def artifactoryUpload(String[] data){
   println("target for pattern 0")
   String path = "${artifactoryFolderName}${target[0]}${build.toString()}"
   String target_path1= artifactoryFolderName+target[0]+build.toString()
+  def spec_data = readJSON file: 'artifactory.json'
   rtUpload (
   serverId: serverID,
-  spec: '''{
-        "files": [
-          {
-            "pattern": ${pattern[0]},
-            "target":  ${artifactoryFolderName}+${target[0]}+${build.toString()}
-          },
-          {
-            "pattern": ${pattern[1]},
-            "target" : ${artifactoryFolderName}+${target[1]}+${build.toString()},
-            "recursive":true
-          }
-       ]
-      }''',
+//   spec: '''{
+//         "files": [
+//           {
+//             "pattern": ${pattern[0]},
+//             "target":  ${artifactoryFolderName}+${target[0]}+${build.toString()}
+//           },
+//           {
+//             "pattern": ${pattern[1]},
+//             "target" : ${artifactoryFolderName}+${target[1]}+${build.toString()},
+//             "recursive":true
+//           }
+//        ]
+//       }''',
+    spec : spec_data,
 
   )
   
